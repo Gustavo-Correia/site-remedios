@@ -603,9 +603,12 @@ color: #00fff7;
     }
 }
 
-@media screen and (max-width:340px) {
+@media screen and (max-width:367px) {
     /* ==== H2 GLOBAL */
-    .container-depoimentos>h2 {
+    .card-depoimentos>h4{
+        font-size: 1.4rem;
+    }
+    .container-depoimentos>h4 {
         font-size: 1.5rem;
     }
     .container-oque-aprender>h2 {
