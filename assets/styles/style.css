@@ -1,0 +1,644 @@
+/*dark-mode*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+body {
+    transition: background 0.2s linear;
+}
+
+.buttondark {
+opacity: 0;
+position: absolute;
+}
+
+.label {
+background-color: #111;
+border-radius: 50px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 5px;
+position: relative;
+height: 26px;
+width: 50px;
+transform: scale(1.5);
+
+}
+
+
+.label .ball {
+background-color: #fff;
+border-radius: 50%;
+position: absolute;
+top: 2px;
+left: 2px;
+height: 22px;
+width: 22px;
+transform: translateX(0px);
+transition: transform 0.2s linear;
+}
+
+.buttondark:checked + .label .ball {
+transform: translateX(24px);
+}
+
+.fa-moon {
+color: #f1c40f;
+}
+
+.fa-sun {
+color: #f39c12;
+}
+
+
+
+:root{
+--body-bg: #fafafa;
+--body-color: #555;
+--link-color: #222;
+--link-color-hover: #ec5840;
+}
+
+.dark-mode:root {
+    --body-bg: #212529;
+    --body-color: #899095;
+    --link-color: #dee2e6;
+    --link-color-hover: #3cc368;
+}
+body{
+    background-color: var(--body-bg);
+    color: var(--body-color);
+}
+
+/* ==== ELEMENTOS REPETIDOS(sem local fixo) ==== */
+
+.div-button {
+    margin: 30px;
+    text-align: center;
+    height: 50px;
+}
+.btn-inscreva-se-laranja {
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: 900;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #d46f21, #f86b00, #e0a52e);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btn-inscreva-se-laranja:hover {
+    box-shadow: #d3773080 0px 0px 15px 5px;
+    animation: botao 0.4s infinite alternate;
+}
+.btn-inscreva-se-laranja:active,
+.btn-inscreva-se-laranja:focus {
+    border: none;
+    outline: none;
+    box-shadow: #d3773080 0px 0px 15px 5px;
+}
+@keyframes botao {
+    from {
+        transform: scale(1);
+    }to {
+        transform: scale(1.05);
+    }
+}
+.img-barra {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 150px;
+}
+
+/* ==== HEADER ==== */
+header {
+    background-image: linear-gradient(#3788a6, #1d6b87, #0a5773);
+}
+.logo {
+    width: 100px;
+}
+.link-nav {
+    margin-right: 4px;
+    font-size: 13px;
+    color: black;
+    transition: all 0.5s ease;
+}
+.link-nav:hover {
+    color: white;
+}
+.icone-links {
+    width: 35px;
+}
+.container-header{
+    display: grid;
+    grid-template: auto / 60% 40%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card-header-my{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+.card-header-my>h1{
+    font-weight: 700;
+    font-size: 4rem;
+}
+.card-header-my>p{
+    margin-bottom: 0px;
+}
+.div-btn{
+    margin: 30px 30px 30px 0px;
+    height: 50px;
+}
+.btn-inscreva-se {
+    margin-top: 5px;
+    padding: 12px;
+    font-weight: 900;
+    border-radius: 10px;
+    background-image: linear-gradient(190deg, #15b0ab, #22d9d3, #49faf4);
+    transition: all 0.7s;
+    border: none;
+    cursor: pointer;
+}
+.btn-inscreva-se:hover{
+    box-shadow: #1990bbcd 0px 0px 15px 5px;
+    animation: botao 0.4s infinite alternate;
+}
+.btn-inscreva-se:active,
+.btn-inscreva-se:focus {
+    border: none;
+    outline: none;
+    box-shadow: #1990bbcd 0px 0px 15px 5px;
+}
+
+/* ==== SOBRE CURSO ==== */
+.container-sobre>h2{
+    text-align: center;
+    margin: 60px 40px 30px 60px;
+    font-weight: 900;
+}
+.cards-sobre-remedio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.card-sobre-remedio {
+    border-radius: 5px;
+    width: 350px;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.527) 0px 0px 10px 2px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.card-sobre-remedio:hover{
+    transform: scale(1.05);
+}
+.item-card-sobre-remedio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    top: 10px; 
+    position: relative;
+}
+.item-card-sobre-remedio h3 {
+    text-align: center; 
+}
+.item-card-estatisticas-curso>h3 { 
+    font-size: 33px;
+    font-weight: 900;
+}
+.item-card-estatisticas-curso>span {
+    color: gray;
+}
+.img-mais {
+    position: absolute;
+    left: 145px;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+}
+
+/* ==== DEPOIMENTOS ====  */
+.container-depoimentos {
+    position: relative;
+}
+.container-depoimentos>h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 60px 40px 5px 80px;
+    font-weight: 900;
+}
+.cards-depoimentos {
+    margin-top: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+.card-depoimentos {
+    position: relative;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0px 12px 0px 12px;
+    max-width: 400px;
+    height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.527) 5px 5px 15px 1px;
+    
+    
+}
+#exp-1{
+color: #00fff7;
+}
+.card-depoimentos>p {
+    padding-top: 10px;
+    color: gray;
+}
+.card-depoimentos>h4 {
+    font-weight: 700;
+    text-align:center; /* Alinha o texto justificado */
+    margin-top: 20px;
+}
+.card-depoimentos>h1 {
+    font-weight: 700;
+    text-align:center; /* Alinha o texto justificado */
+    margin-top: 20px;
+}
+.img-aspas-depoimento {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 80px;
+}
+.img-depoimento {
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: 100px;
+}
+
+/* ====O QUE VOCÊ VAI APRENDER */
+.container-oque-aprender {
+    margin: 20px;
+}
+.container-oque-aprender>h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 60px 40px 30px 40px;
+    font-weight: 900;
+    border-bottom: black solid 1px;
+}
+.cards-oque-mtf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-oque-mtf {
+    padding: 10px;
+    border-bottom: black solid 1px;
+    display: flex;
+    gap: 10px;
+    max-width: 800px;
+}
+.div-texto-oque-mtf>h4 {
+    font-weight: 900;
+    margin: 5px 5px 5px 0px;
+    align-items: center;
+}
+.div-texto-oque-mtf>h3 {
+    text-align: center;
+}
+.div-img-oque-mtf {
+    display: flex;
+    align-items: center;
+}
+.div-img-oque-mtf img{
+    border-radius: 160px;
+}
+
+/* ==== BENEFÍCIOS ==== */
+.container-beneficios {
+    position: relative;
+}
+.container-beneficios>h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+    margin: 60px 40px 20px 80px;
+    font-weight: 900;
+}
+.cards-beneficios {
+    display: flex;
+    grid-template: auto auto auto auto / auto;
+    justify-content: center;
+    gap: 20px;
+}
+.card-beneficios {
+    max-width: 450px;
+    margin: 0px 15px 0px 15px;
+}
+.card-beneficios>h4{
+    text-decoration: line-through; /* Riscar o texto */
+    color: red; /* Definir a cor vermelha */
+}
+.img-beneficios {
+    width: 200px;
+}
+
+/* ==== FAQ ==== */
+.container-faq {
+    margin: 20px;
+}
+.container-faq>h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 60px 20px 30px 20px;
+    font-weight: 900;
+}
+.cards-faq {
+    margin: 0 auto;
+    max-width: 800px;
+    cursor: pointer;
+}
+.card-faq {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: black 1px solid;
+}
+.card-faq-pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-faq-pergunta>h4 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.card-faq-resposta {
+    height: 0;
+    overflow: hidden;
+    border-left: 2px solid #009995;
+    transition: all 0.9s ease;
+}
+.card-faq-resposta>p {
+    margin: 5px ;
+    font-size: 0.9rem;
+}
+.ativo{
+    padding-bottom: 10px;
+    animation: mostrarResposta 1s ease;
+}
+.img-faq {
+    width: 22px;
+    height: 22px;
+    margin: 0px 5px 0px 5px;
+    transition: all 0.1s ease-in;
+}
+@keyframes mostrarResposta {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* ==== PRONTO ==== */
+.container-pronto {
+    margin-top: 50px;
+    background-image: linear-gradient(#3788a6, #1d6b87, #0a5773);
+    text-align: center;
+    position: relative;
+    align-items: end;
+}
+.card-pronto>button {
+    transform: translateY(-30px);
+}
+.card-pronto>h2 {
+    color: white;
+    transform: translateY(-100px);
+    font-size: 2.5rem;
+    margin:0px 15px;
+}
+.card-pronto>div{
+    transform: translateY(-60px);
+    text-align: center;
+    height: 50px;
+    
+}
+
+.img-pronto {
+    transform: translateY(30px);
+    width: 250px;
+}
+
+/* ==== FOOTER ==== */
+.card-footer-my{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.nav-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.link-footer {
+    color: gray;
+}
+.link-footer:hover {
+    color: gray;
+}
+.link-footer:active .link-footer:focus {
+    text-decoration: underline;
+}
+.div-copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.div-copy>img{
+    width: 25px;
+    margin: 0px 0px 15px 5px ;
+}
+.div-copy>p{
+    font-size: 0.7rem;
+}
+
+/* ==== ANIMAÇÃO SCROLL */
+.card-depoimentos{
+    visibility: hidden;
+} 
+.card-beneficios{
+    visibility: hidden;
+}
+
+/* ==== MEDIAS QUERIES */
+@media screen and (min-width:960px) {
+    /* ==== DEPOIMENTOS */
+    .cards-depoimentos {
+        grid-template: auto auto/ auto auto;
+    }
+}
+
+@media screen and (min-width:860px) {
+    /* ==== SOBRE */
+    .cards-sobre-remedio {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:800px) {
+    /* ==== BENEFÍCIOS */
+    .cards-beneficios {
+        grid-template: auto auto/ auto auto;
+        gap: 0px;
+    }
+    .card-beneficios {
+        margin: 10px 40px 10px 40px;
+        border: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    /* ==== HEADER ==== */
+    .container-header{
+        grid-template: auto auto / auto;
+    }
+    .card-header-my{
+        order: 1;
+        transform:translateY(-150px);
+    }
+    .card-header-my>h1{
+        font-weight: 700;
+        font-size: 3em;
+    }
+    .btn-inscreva-se {
+        font-weight: 700;
+        background-image: linear-gradient(190deg, #15b0ab, #22d9d3, #49faf4);
+    }
+    .card-header-img{
+        text-align: right;
+    }
+    
+    
+    .foco{
+        width: 35%;
+        overflow: hidden;
+        top: 280px;
+        left: 0px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:450px) {
+    /* ==== H2 GLOBAL */
+    .container-depoimentos>h2 {
+        font-size: 2rem;
+    }
+    .container-oque-aprender>h2 {
+        font-size: 2rem;
+    }
+    .container-beneficios>h2 {
+        font-size: 2rem;
+    }
+    .container-faq>h2 {
+        font-size: 2rem;
+    }
+    .card-pronto>h2 {
+        font-size: 2rem;
+    }
+
+    /*  ==== HEADER ==== */
+    .card-header-my{
+        order: 1;
+        transform:translateY(-150px);
+    }
+    .card-header-my>h1{
+        font-weight: 700;
+        font-size: 3em;
+    }
+    .btn-inscreva-se {
+        font-weight: 700;
+        background-image: linear-gradient(190deg, #15b0ab, #22d9d3, #49faf4);
+    }
+    .card-header-img{
+        text-align: right;
+    }
+    .foco{
+        width: 40%;
+        overflow: hidden;
+    }
+
+    /* ====FOOTER==== */
+    .nav-footer {
+        display: grid;
+        gap: 5px;
+    }
+
+    /* ====O QUE VOCÊ VAI APRENDER */
+    .card-oque-mtf {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .div-img-oque-mtf {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:340px) {
+    /* ==== H2 GLOBAL */
+    .container-depoimentos>h2 {
+        font-size: 1.5rem;
+    }
+    .container-oque-aprender>h2 {
+        font-size: 1.5rem;
+    }
+    .container-beneficios>h2 {
+        font-size: 1.5rem;
+    }
+    .container-faq>h2 {
+        font-size: 1.5rem;
+    }
+    .card-pronto>h2 {
+        font-size: 1.5rem;
+    }
+
+    /*  ==== HEADER ==== */
+    .card-header-my{
+        order: 1;
+        transform:translateY(-150px);
+    }
+    .card-header-my>h1{
+        font-weight: 700;
+        font-size: 2em;
+    }
+    .btn-inscreva-se {
+        font-weight: 700;
+        background-image: linear-gradient(190deg, #15b0ab, #22d9d3, #49faf4);
+    }
+    .card-header-img{
+        text-align: center;
+    }
+    .foco{
+        width: 45%;
+        overflow: hidden;
+        top: 300px;
+        left: 80px;
+        position: relative;
+    }
+}
