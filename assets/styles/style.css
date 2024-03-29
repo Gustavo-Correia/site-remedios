@@ -338,9 +338,7 @@ color: #00fff7;
 }
 .cards-beneficios {
     display: flex;
-    grid-template: auto auto auto auto / auto;
     justify-content: center;
-    gap: 20px;
 }
 .card-beneficios {
     max-width: 450px;
@@ -514,6 +512,10 @@ color: #00fff7;
 
 @media screen and (max-width:800px) {
     /* ==== HEADER ==== */
+    .cards-beneficios {
+        flex-direction:column;
+        align-items: center;
+    }
     .container-header{
         grid-template: auto auto / auto;
     }
@@ -541,6 +543,7 @@ color: #00fff7;
         left: 0px;
         position: relative;
     }
+   
 }
 
 @media screen and (max-width:450px) {
